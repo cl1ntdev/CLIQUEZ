@@ -1,0 +1,138 @@
+body{
+    margin: 10px;
+    font-family: Tahoma;
+}
+*{
+    padding: 0;
+    margin: 0;
+    background: #161623;
+}
+.but{
+    background: red;
+    padding: 10px;
+    border-radius: 40px;
+    font-size: 50px;
+    margin: 10px;
+}
+
+.easy{
+    cursor: pointer;
+    background: rgb(135, 237, 135);
+    box-shadow: rgba(81, 255, 0, 0.56) 0px 22px 70px 4px;
+}.hard{
+    cursor: pointer;
+    box-shadow: rgba(240, 13, 13, 0.56) 0px 22px 70px 4px;
+
+    background: rgb(239, 94, 94);
+}.medium{
+    cursor: pointer;
+    box-shadow: rgba(204, 247, 12, 0.56) 0px 22px 70px 4px;
+
+    background: rgb(238, 255, 0);
+}
+.theDifs{
+    top: -100px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+.difficulty{
+    position: relative;
+    top: 200px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.diffShow{
+    border-radius: 10px;
+    position: relative;
+    top: 200px;
+    background: yellow;
+    box-shadow: rgba(251, 255, 3, 0.56) 0px 22px 70px 4px;
+
+    /* border: 1px solid green; */
+    height: 500px;
+    width: 900px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.butLevE{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+    cursor: pointer;
+    background: rgb(48, 247, 4);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    font-weight: 900;
+    font-size: 30px;
+    width: 400px;
+    height: 200px;
+    border: none;
+}.butLevM{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+    background: rgb(238, 255, 0);
+    cursor: pointer;
+    border: none;
+    font-weight: 900;
+
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 30px;
+    width: 400px;
+    height: 200px;
+}.butLevH{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+    background: rgb(255, 0, 0);
+    cursor: pointer;
+    border: none;
+    font-weight: 900;
+
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 30px;
+    width: 400px;
+    height: 200px;
+}
+
+
+
+.header{
+    position: relative;
+    z-index: 1;
+    top: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 10px;
+}
+
+.bu{
+    cursor: pointer;
+    background: yellow;
+    font-size: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 20px green;
+    border: solid black 1px;
+    margin-left: 1px;
+}
+.back{
+    position: relative;
+    left: -43%;
+    
+}.reset {
+    
+    position: relative;
+    left: 850px;
+    
+}
+.logo{
+    width: 10%;
+}

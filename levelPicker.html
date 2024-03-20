@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pick Level</title>
+    <link rel="stylesheet" href="levelPickerStyle.css">
+</head>
+<body>
+    <img src="logo.png" class="logo" onclick="window.location.href='playgame.html'" style="cursor: pointer;">
+    <div class="header">
+        <div class="bu back" onclick="back()">Back</div>
+        <div class="bu reset" onclick="reset()">Reset</div>
+    </div>
+   
+    <div class="theDifs">
+        
+        <div class="difficulty">
+            
+            <div class="but easy" id="easy" onclick="pass('easy')">EASY</div>
+            <div class="but medium" id="medium" onclick="pass('medium')">MEDIUM</div>
+            <div class="but hard" id="hard" onclick="pass('hard')">HARD</div>
+        </div>
+        <div class="diffShow"></div>
+    </div>
+
+    <script src="levelPicker.js"></script>
+    
+</body>
+</html>

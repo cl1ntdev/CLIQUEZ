@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataBase</title>
+    <style type="text/css">
+        .form{
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            background: rgb(255, 255, 0);  
+            border-radius: 20px;
+            /* border: 1px solid; */
+            height: 600px;
+            width: 800px;
+            position: relative;
+            top: 100px;
+        }
+        body{
+            background: #161623;
+
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+        .name{
+            color: white;
+            background: #161623;
+            height: 100px;
+            width: 700px;
+            font-size: 40px;
+            margin-bottom: 40px;
+        }
+        .nameLabel{
+            font-size: 50px;
+        }.OK{
+            color: white;
+            background: #161623;
+            border-radius: 10px;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form">
+        <label class="nameLabel">PLAYER NAME</label>
+        <input class="name" type="text" name="name" id="">
+        <button class="OK" onclick="OK()">OK</button>
+    </div>
+
+    <script type="text/javascript">
+        let day = new Date();
+        // let hh = day.getHours() * 30;
+        // let mm = day.getMinutes() * 6;
+        // let ss = day.getSeconds() * 6;
+        let month = day.getMonth()+1
+        let year = day.getFullYear();
+        let date = day.getDate();
+        let h = new Date().getHours();
+        let op = {timestyle:'short', hour12: true};
+        let curtime = day.toLocaleTimeString('en-PH',op)
+        let m = new Date().getMinutes();
+        // let s = new Date().getSeconds();
+
+        // h = (h<10) ? "0" + h : h
+        // m = (h<10) ? "0" + m: m
+        // s = (h<10) ? "0" + s : s
+        let am = h >=12 ? "PM" : "AM"
+        let time = ''
+        // const getScore = new URLSearchParams(window.location.search)
+        // const score = getScore.get('score')
+        // console.log(`score is ${score}`)
+        time = `${date}/${month}/${year} -- ${curtime}`
+
+        // console.log(curtime)
+        console.log(time)
+        function OK(){
+
+         let name = document.querySelector('.name').value.trim()
+         let mainscore = localStorage.getItem('score')
+         console.log(mainscore)
+         
+         const allUsers = JSON.parse(localStorage.getItem('allUsers')) || [];
+         const checkR = allUsers.find((allUsers)=>allUsers.name.toLowerCase()===name.toLowerCase())
+         if(checkR){
+            alert('name already exist');return;
+         }
+         if(name ==''){
+            alert('Enter Name n');return;
+         }
+
+         allUsers.push({name, mainscore, time})
+         localStorage.setItem('allUsers',JSON.stringify(allUsers))
+
+            //  const check = 
+         if(document.querySelector('.name').value !==''){
+            localStorage.removeItem('score')
+            localStorage.removeItem('eLevel1w')
+            localStorage.removeItem('eLevel2w')
+            localStorage.removeItem('eLevel3w')
+            localStorage.removeItem('mLevel1w')
+            localStorage.removeItem('mLevel2w')
+            localStorage.removeItem('mLevel3w')
+            localStorage.removeItem('hLevel1w')
+            localStorage.removeItem('hLevel2w')
+            localStorage.removeItem('hLevel3w')
+            localStorage.removeItem('score')
+            localStorage.removeItem('hearts')
+            window.location.href = 'playgame.html'
+         }
+        };
+    </script>
+</body>
+</html>
